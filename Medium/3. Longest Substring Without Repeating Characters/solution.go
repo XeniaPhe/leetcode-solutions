@@ -1,5 +1,13 @@
 package longest_substring_without_repeating_characters
 
+/*
+Complexity:
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+
+    n: Size of the input
+*/
+
 func lengthOfLongestSubstring(s string) int {
     lastSeen := make(map[rune]int, len(s))
     longestRun := 0

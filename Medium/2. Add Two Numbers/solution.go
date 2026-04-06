@@ -1,17 +1,18 @@
 package add_two_numbers
 
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-
 type ListNode struct {
 	Val int
 	Next *ListNode
 }
+
+/*
+Complexity:
+    Time Complexity: O(max(m, n))
+    Space Complexity: O(N)
+
+    max(m, n): Maximum size of the inputs
+    N: Maximum size of a linked-list represented number (100)
+*/
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     resultNodes := make([]ListNode, 102)
