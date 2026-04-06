@@ -3,12 +3,14 @@ package longest_palindromic_substring
 /*
 Complexity:
     Time Complexity: O(n^2)
-    Space Complexity: O(1)
+    Space Complexity: O(n)
 
     n: Size of the input
 */
 
 func longestPalindrome(s string) string {
+    // Since strings are byte slices, this cast unfortunately makes a copy.
+    // But on the bright side, the solution inherently supports unicode.
     runeSlice := []rune(s)
     lastIdx := len(s) - 1
     center := lastIdx / 2
