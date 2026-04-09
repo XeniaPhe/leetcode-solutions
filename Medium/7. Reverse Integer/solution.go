@@ -2,8 +2,9 @@ package reverse_integer
 
 /*
 Complexity:
-    Time Complexity: O(log(n))
-    Space Complexity: O(1)
+    Time Complexity           : O(log(n))
+    Total Space Complexity    : O(1)
+    Auxilary Space Complexity : O(1)
 
     log(n): Number of decimal digits in input
 */

@@ -2,10 +2,11 @@ package zigzag_conversion
 
 /*
 Complexity:
-    Time Complexity: O(n)
-    Space Complexity: O(n)
+    Time Complexity           : O(n)
+    Total Space Complexity    : O(n)
+    Auxilary Space Complexity : O(1)
 
-    n: Size of the input string
+    n: Size of the input
 */
 
 func convert(s string, numRows int) string {
@@ -13,10 +14,8 @@ func convert(s string, numRows int) string {
         return s
     }
 
-	// Since this is a copy, the space complexity is O(n) even when excluding the result
-    runeSlice := []rune(s)
     ln := len(s)
-    result := make([]rune, ln)
+    result := make([]byte, ln)
     resultIdx, lastRowIdx := 0, numRows - 1
 
     for i := 0; i < numRows; i += 1 {
@@ -31,7 +30,7 @@ func convert(s string, numRows int) string {
             break
         }
 
-        result[resultIdx] = runeSlice[prevIdx]
+        result[resultIdx] = s[prevIdx]
         resultIdx += 1
 
         for {
@@ -40,7 +39,7 @@ func convert(s string, numRows int) string {
                 break
             }
 
-            result[resultIdx] = runeSlice[prevIdx]
+            result[resultIdx] = s[prevIdx]
             currOffset = (currOffset + 1) % 2
             resultIdx += 1
         }

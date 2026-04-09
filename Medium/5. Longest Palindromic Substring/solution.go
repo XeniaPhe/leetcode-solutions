@@ -2,19 +2,17 @@ package longest_palindromic_substring
 
 /*
 Complexity:
-    Time Complexity: O(n^2)
-    Space Complexity: O(n)
+    Time Complexity           : O(n^2)
+    Total Space Complexity    : O(1)
+    Auxilary Space Complexity : O(1)
 
     n: Size of the input
 */
 
 func longestPalindrome(s string) string {
-    // Since strings are byte slices, this cast unfortunately makes a copy.
-    // But on the bright side, the solution inherently supports unicode.
-    runeSlice := []rune(s)
     lastIdx := len(s) - 1
     center := lastIdx / 2
-    longestBegin, longestEnd := 0, 1
+    begin, end := 0, 1
 
     for i := 0; i <= center; i += 1 {
         centerLeft, centerRight := center - i, center + i
@@ -25,20 +23,16 @@ func longestPalindrome(s string) string {
         evenLeftMinDist := mint2(centerLeft, lastIdx - centerEvenLeft)
         evenRightMinDist := mint2(centerRight, lastIdx - centerEvenRight)
 
-        longestBegin, longestEnd = longestOddPalindrome(runeSlice, centerLeft, oddLeftMinDist,
-                                                        longestBegin, longestEnd)
-        longestBegin, longestEnd = longestOddPalindrome(runeSlice, centerRight, oddRightMinDist,
-                                                        longestBegin, longestEnd)
-        longestBegin, longestEnd = longestEvenPalindrome(runeSlice, centerLeft, centerEvenLeft, evenLeftMinDist,
-                                                        longestBegin, longestEnd)
-        longestBegin, longestEnd = longestEvenPalindrome(runeSlice, centerRight, centerEvenRight, evenRightMinDist,
-                                                        longestBegin, longestEnd)
+        begin, end = longestOddPalindrome(s, centerLeft, oddLeftMinDist, begin, end)
+        begin, end = longestOddPalindrome(s, centerRight, oddRightMinDist, begin, end)
+        begin, end = longestEvenPalindrome(s, centerLeft, centerEvenLeft, evenLeftMinDist, begin, end)
+        begin, end = longestEvenPalindrome(s, centerRight, centerEvenRight, evenRightMinDist, begin, end)
     }
 
-    return string(runeSlice[longestBegin:longestEnd])
+    return s[begin:end]
 }
 
-func longestOddPalindrome(s []rune, center int, maxDist int, longestBegin int, longestEnd int) (int, int) {
+func longestOddPalindrome(s string, center int, maxDist int, longestBegin int, longestEnd int) (int, int) {
     longest := longestEnd - longestBegin
     if 2 * maxDist < longest {
         return longestBegin, longestEnd
@@ -59,8 +53,7 @@ func longestOddPalindrome(s []rune, center int, maxDist int, longestBegin int, l
     return center - width, center + width + 1
 }
 
-func longestEvenPalindrome(s []rune, centerLeft int, centerRight int,
-                            maxDist int, longestBegin int, longestEnd int) (int, int) {
+func longestEvenPalindrome(s string, cLeft int, cRight int, maxDist int, longestBegin int, longestEnd int) (int, int) {
 
     longest := longestEnd - longestBegin
     if 2 * maxDist + 2 <= longest {
@@ -69,7 +62,7 @@ func longestEvenPalindrome(s []rune, centerLeft int, centerRight int,
 
     ln := 0
     for i := 0; i <= maxDist; ln, i = ln + 2, i + 1 {
-        if s[centerLeft - i] != s[centerRight + i] {
+        if s[cLeft - i] != s[cRight + i] {
             break
         }
     }
@@ -79,7 +72,7 @@ func longestEvenPalindrome(s []rune, centerLeft int, centerRight int,
     }
 
     width := (ln - 2) / 2
-    return centerLeft - width, centerRight + width + 1
+    return cLeft - width, cRight + width + 1
 }
 
 func mint2(a int, b int) int {
