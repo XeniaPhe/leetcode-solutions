@@ -1,5 +1,7 @@
 package zigzag_conversion
 
+import "unsafe"
+
 /*
 Complexity:
     Time Complexity           : O(n)
@@ -45,5 +47,5 @@ func convert(s string, numRows int) string {
         }
     }
 
-    return string(result)
+    return unsafe.String(unsafe.SliceData(result), ln)
 }
