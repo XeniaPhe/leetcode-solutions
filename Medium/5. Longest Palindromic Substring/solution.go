@@ -1,14 +1,5 @@
 package longest_palindromic_substring
 
-/*
-Complexity:
-    Time Complexity           : O(n^2)
-    Total Space Complexity    : O(1)
-    Auxilary Space Complexity : O(1)
-
-    n: Size of the input
-*/
-
 func longestPalindrome(s string) string {
     lastIdx := len(s) - 1
     center := lastIdx / 2
@@ -54,7 +45,6 @@ func longestOddPalindrome(s string, center int, maxDist int, longestBegin int, l
 }
 
 func longestEvenPalindrome(s string, cLeft int, cRight int, maxDist int, longestBegin int, longestEnd int) (int, int) {
-
     longest := longestEnd - longestBegin
     if 2 * maxDist + 2 <= longest {
         return longestBegin, longestEnd

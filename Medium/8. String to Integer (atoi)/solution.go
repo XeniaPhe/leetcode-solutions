@@ -5,15 +5,6 @@ import (
     "math"
 )
 
-/*
-Complexity:
-    Time Complexity           : O(n)
-    Total Space Complexity    : O(1)
-    Auxilary Space Complexity : O(1)
-
-    n: Size of the input
-*/
-
 func myAtoi(s string) int {
     s = strings.Trim(s, " ")
     if len(s) == 0 {

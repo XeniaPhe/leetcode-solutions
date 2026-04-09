@@ -5,16 +5,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-/*
-Complexity:
-    Time Complexity           : O(N)
-    Total Space Complexity    : O(N)
-    Auxilary Space Complexity : O(N - max(m, n))
-
-    max(m, n): Maximum size of the inputs
-    N: Maximum size of a linked-list represented number (101)
-*/
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     resultNodes := make([]ListNode, 102)
     currIdx := 0

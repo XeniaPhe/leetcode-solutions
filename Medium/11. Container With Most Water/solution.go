@@ -1,14 +1,5 @@
 package container_with_most_water
 
-/*
-Complexity:
-    Time Complexity           : O(n)
-    Total Space Complexity    : O(1)
-    Auxilary Space Complexity : O(1)
-
-    n: Size of the input
-*/
-
 func maxArea(height []int) int {
     maxArea := 0
     for left, right := 0, len(height) - 1; right > left; {

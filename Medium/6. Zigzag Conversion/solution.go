@@ -2,15 +2,6 @@ package zigzag_conversion
 
 import "unsafe"
 
-/*
-Complexity:
-    Time Complexity           : O(n)
-    Total Space Complexity    : O(n)
-    Auxilary Space Complexity : O(1)
-
-    n: Size of the input
-*/
-
 func convert(s string, numRows int) string {
     if numRows == 1 {
         return s
