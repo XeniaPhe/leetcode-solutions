@@ -7,7 +7,7 @@ func threeSumClosest(nums []int, target int) int {
     bestSum := nums[0] + nums[1] + nums[2]
     bestDiff := abs(target - bestSum)
 
-    for i := 0; i < len(nums); i += 1 {
+    for i := 0; i < len(nums) - 2; i += 1 {
         j, k := i + 1, len(nums) - 1
         
         for j < k {
