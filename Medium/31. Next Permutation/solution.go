@@ -13,15 +13,15 @@ func nextPermutation(nums []int)  {
         }
 
         for j := i + 1; j < len(nums); j += 1 {
-            if nums[j] > nums[i - 1] && nums[j] < nums[min] {
+            if nums[j] > nums[i - 1] && nums[j] <= nums[min] {
                 min = j
             }
         }
 
         nums[i - 1], nums[min] = nums[min], nums[i - 1]
-        slices.Sort(nums[i:])
+        slices.Reverse(nums[i:])
         return
     }
 
-    slices.Sort(nums)
+    slices.Reverse(nums)
 }
