@@ -43,7 +43,8 @@ func genTrees(result []*TreeNode, nums []bool, bst []int, visited []int, undo []
         return append(result, &nodes[bst[0] - 1])
     }
 
-    leaves, j := append(leaves, [3]int{0, 0, 0}), len(leaves)
+    j := len(leaves)
+    leaves = append(leaves, [3]int{0,0,0})
     for i := 0; i < j; i += 1 {
         idx, lb, ub := leaves[i][0], leaves[i][1], leaves[i][2]
         leaves[i][0], leaves[j][0] = (2 * idx) + 1, (2 * idx) + 2
