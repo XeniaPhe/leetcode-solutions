@@ -22,4 +22,4 @@ You may assume that each input would have exactly one solution.
 
 *   `3 <= nums.length <= 500`
 *   `-1000 <= nums[i] <= 1000`
-*   `-104 <= target <= 104`
+*   <code>-10<sup>4</sup> <= target <= 10<sup>4</sup></code>

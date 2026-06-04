@@ -6,7 +6,10 @@ The integer division should truncate toward zero, which means losing its fractio
 
 Return _the **quotient** after dividing_ `dividend` _by_ `divisor`.
 
-**Note:** Assume we are dealing with an environment that could only store integers within the **32-bit** signed integer range: `[−231, 231 − 1]`. For this problem, if the quotient is **strictly greater than** `231 - 1`, then return `231 - 1`, and if the quotient is **strictly less than** `-231`, then return `-231`.
+**Note:** Assume we are dealing with an environment that could only store integers within the **32-bit** signed integer range: <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>
+. For this problem, if the quotient is **strictly greater than** <code>2<sup>31</sup> - 1</code>, then return <code>2<sup>31</sup> - 1</code>, and if the quotient is **strictly less than** <code>-2<sup>31</sup></code>
+, then return <code>-2<sup>31</sup></code>
+.
 
 ### **Example 1:**
 
@@ -22,5 +25,5 @@ Return _the **quotient** after dividing_ `dividend` _by_ `divisor`.
 
 #### **Constraints:**
 
-*   `-231 <= dividend, divisor <= 231 - 1`
+*   <code>-2<sup>31</sup> <= dividend, divisor <= 2<sup>31</sup> - 1</code>
 *   `divisor != 0`

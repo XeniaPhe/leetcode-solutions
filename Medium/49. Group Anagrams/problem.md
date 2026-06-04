@@ -28,6 +28,6 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 
 #### **Constraints:**
 
-*   `1 <= strs.length <= 104`
+*   <code>1 <= strs.length <= 10<sup>4</sup></code>
 *   `0 <= strs[i].length <= 100`
 *   `strs[i]` consists of lowercase English letters.

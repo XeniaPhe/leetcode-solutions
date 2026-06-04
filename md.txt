@@ -1,0 +1,7 @@
+<code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>
+<code>-2<sup>31</sup></code>
+<code>2<sup>31</sup> - 1</code>
+<code>i<sup>th</sup></code>
+*   <code>1 <= nums.length <= 10<sup>4</sup></code>
+*   <code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code>
+*   <code>-10<sup>4</sup> <= target <= 10<sup>4</sup></code>

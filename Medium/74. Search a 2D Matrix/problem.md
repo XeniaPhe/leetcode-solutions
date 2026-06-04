@@ -28,4 +28,4 @@ You must write a solution in `O(log(m * n))` time complexity.
 *   `m == matrix.length`
 *   `n == matrix[i].length`
 *   `1 <= m, n <= 100`
-*   `-104 <= matrix[i][j], target <= 104`
+*   <code>-10<sup>4</sup> <= matrix[i][j], target <= 10<sup>4</sup></code>

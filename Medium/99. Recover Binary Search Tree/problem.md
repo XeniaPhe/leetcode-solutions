@@ -21,6 +21,6 @@ You are given the `root` of a binary search tree (BST), where the values of **ex
 #### **Constraints:**
 
 *   The number of nodes in the tree is in the range `[2, 1000]`.
-*   `-231 <= Node.val <= 231 - 1`
+*   <code>-2<sup>31</sup> <= Node.val <= 2<sup>31</sup> - 1</code>
 
 **Follow up:** A solution using `O(n)` space is pretty straight-forward. Could you devise a constant `O(1)` space solution?

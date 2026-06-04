@@ -40,6 +40,6 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 #### **Constraints:**
 
-*   `1 <= nums.length <= 3 * 104`
-*   `-104 <= nums[i] <= 104`
+*   <code>1 <= nums.length <= 3 * 10<sup>4</sup></code>
+*   <code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code>
 *   `nums` is sorted in **non-decreasing** order.

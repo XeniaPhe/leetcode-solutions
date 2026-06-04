@@ -22,6 +22,6 @@ Return _the minimum number of jumps to reach index_ `n - 1`. The test cases are 
 
 #### **Constraints:**
 
-*   `1 <= nums.length <= 104`
+*   <code>1 <= nums.length <= 10<sup>4</sup></code>
 *   `0 <= nums[i] <= 1000`
 *   It's guaranteed that you can reach `nums[n - 1]`.
