@@ -11,19 +11,19 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
         indices[val] = idx
     }
 
-    return tree(preorder, inorder, indices, 0)
+    return build(preorder, indices, 0)
 }
 
-func tree(preorder []int, inorder []int, indices map[int]int, offset int) *TreeNode {
+func build(preorder []int, indices map[int]int, offset int) *TreeNode {
     if len(preorder) == 0 {
         return nil
-    } else if idx := indices[preorder[0]] + offset; idx < 0 {
+    } else if idx := indices[preorder[0]] + offset + 1; idx <= 0 {
         return &TreeNode{preorder[0], nil, nil}
     } else {
         return &TreeNode {
             Val: preorder[0],
-            Left: tree(preorder[1:idx + 1], inorder[:idx], indices, offset),
-            Right: tree(preorder[idx + 1:], inorder[idx + 1:], indices, offset - idx - 1),
+            Left: build(preorder[1:idx], indices, offset),
+            Right: build(preorder[idx:], indices, offset - idx),
         }
     }
 }
