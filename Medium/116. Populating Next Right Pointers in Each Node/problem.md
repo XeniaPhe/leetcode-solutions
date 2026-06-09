@@ -4,10 +4,10 @@ You are given a **perfect binary tree** where all leaves are on the same level, 
 
 
     struct Node {
-        int val;
-        Node *left;
-        Node *right;
-        Node *next;
+      int val;
+      Node *left;
+      Node *right;
+      Node *next;
     }
 
 
