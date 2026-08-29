@@ -2,11 +2,11 @@
 
 You are given the head of a singly linked-list. The list can be represented as:
 
-<code>L<sub>0</sub> → L<sub>1</sub> → … → L<sub>n - 1</sub> → L<sub>n</sub></code>
+<pre>L<sub>0</sub> → L<sub>1</sub> → … → L<sub>n - 1</sub> → L<sub>n</sub></pre>
 
 _Reorder the list to be on the following form:_
 
-<code>L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<sub>2</sub> → L<sub>n - 2</sub> → …</code>
+<pre>L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<sub>2</sub> → L<sub>n - 2</sub> → …</pre>
 
 You may not modify the values in the list's nodes. Only nodes themselves may be changed.
 

@@ -16,7 +16,7 @@ Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which c
 
 **Input:** x = 2.00000, n = -2  
 **Output:** 0.25000  
-**Explanation:** <code>2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25</code>
+**Explanation:** 2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25
 
 #### **Constraints:**
 
