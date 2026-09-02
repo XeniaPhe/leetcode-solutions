@@ -2,3 +2,4 @@
 *.code-workspace
 main.go
 go.mod
+txt.txt
